@@ -1,4 +1,5 @@
 #include<stdio.h>
+int result;
 int main()
 {
     printf("Enter the two numbers");
@@ -6,7 +7,9 @@ int main()
     multiply(a,b);
    printf("%d",result);
 }
-void multiply(int a,int b)
+int multiply(int a,int b)
 {
-    result=a*b;
+    result=multiply(a*b);
+    return result;
+    
 }
